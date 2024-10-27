@@ -60,25 +60,56 @@ int main()
    // }
    // printf("\n");
    // free(arr);
-   // return 0 ; 
-
+   // return 0 ;
 
    //  write a program that allocates memory for 5 integers using calloc, initializes them to 0, and prints their values.
 
-   int* arr;
-   arr = (int*)calloc(5 * sizeof(int));
+   //    int* arr;
+   //    arr = (int*)calloc(5 * sizeof(int));
 
-   if(arr==NULL){
-      printf("memory allocation failed");
-      return 1 ; 
+   //    if(arr==NULL){
+   //       printf("memory allocation failed");
+   //       return 1 ;
+   //    }
+
+   //    for(int i=0; i<5; i++){
+   //       printf("%d",arr[i]);
+   //       printf(" ");
+   //    }
+   //    free(arr);
+
+   //  return 0 ;
+
+   //  Write a C program to check whether a number is prime or not.
+
+   int n, i, prime = 1;
+
+   printf("enter the num\n");
+   scanf("%d", &n);
+
+   if (n <= 1)
+   {
+      prime = 0;
    }
 
-   for(int i=0; i<5; i++){
-      printf("%d",arr[i]);
-      printf(" ");
+   else
+   {
+      for (i = 2; i <= n / 2; i++)
+      {
+         if (n % i == 0)
+         {
+            prime = 0;
+            break;
+         }
+      }
    }
-   free(arr);
 
- return 0 ; 
-
+   if (prime)
+   {
+      printf("%d is prime ", n);
+   }
+   else
+   {
+      printf("not a prime ");
+   }
 }
